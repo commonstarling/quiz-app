@@ -1,0 +1,49 @@
+body {
+	background-color: white;
+	font-family: 'Questrial', Sans-serif;
+}
+
+.logo {
+	width: 20%;
+	height: auto;
+	display: block;
+	margin-top: -75px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: -50px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2rem;
+	margin-top: -75px;
+}
+
+h2 {
+	color: white;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 2rem;
+}
+
+.quiz-window {
+	background-color: black;
+	color: white;
+	border: 5px solid #ffcc99;
+	height: 35rem;
+	width: 75rem;
+	margin: 10px auto;
+	border-radius: 50px;
+}
+
+label {
+	color: white;
+	font-size: 3rem;
+	border: 2px solid gray;
+	border-radius: 5px;
+	width: 20rem;
+}
+.answers {
+	float: right;
+	border: 2px solid gray;
+}
