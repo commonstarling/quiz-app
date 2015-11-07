@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+	<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="js/script.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Z-Chi Quiz</title>
@@ -14,26 +15,26 @@
 
 <div class="quiz-window">
 	<h2 class="question">When was the sorority founded?</h2>
-	<div class="answers">
-		<input type="radio" name="radio" id="radio1" class="choices">
-		<label for="radio1">1990</label>
-	</div>
+	<label for="radio1">
+  		<input type="radio" name="radio" id="radio1" class="choices" checked/>
+  		<span>1990</span>
+	</label>
 
-	<div class="answers">
-		<input type="radio" name="radio" id="radio2" class="choices">
-		<label for="radio2">1991</label>
-	</div>
+	<label for="radio2">
+		<input type="radio" name="radio" id="radio2" class="choices"/>
+		<span>1991</span>
+	</label>
 
-	<div class="answers">
-		<input type="radio" name="radio" id="radio3" class="choices">
-		<label for="radio3">1992</label>
-	</div>
+	<label for="radio3">
+		<input type="radio" name="radio" id="radio3" class="choices"/>
+		<span>1993</span>
+	</label>
 
-	<div class="answers">
-		<input type="radio" name="radio" id="radio4" class="choices">
-		<label for="radio4">1993</label>
-	</div>
-	<br>
+	<label for="radio4">
+		<input type="radio" name="radio" id="radio4" class="choices"/>
+		<span>1994</span>
+	</label>
+	<button class="submit">Submit</button>
 	<br>
 	<progress max="100" value="20" placeholder="Progress">Progress</progress>
 </div>
