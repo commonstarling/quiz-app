@@ -11,33 +11,50 @@
 </head>
 <body>
 <img class="logo" src="images/ZSC_logo.png">
-<h1>How well do you know Zeta Sigma Chi?</h1>
+<h1 class="subhead">How well do you know Zeta Sigma Chi?</h1>
 
-<div class="quiz-window">
-	<h2 class="question">When was the sorority founded?</h2>
-	<label for="radio1">
-  		<input type="radio" name="radio" id="radio1" class="choices" checked/>
-  		<span>1990</span>
-	</label>
+<section class="intro">
+	<h1>Welcome to the Zeta Sigma Chi quiz!</h1>
+	<h2>See how much you know about our sorority's history by clicking on an answer and hitting the "submit" button afterward.</h2>
+	<button id="start">Start</button>
+</section>
 
-	<label for="radio2">
-		<input type="radio" name="radio" id="radio2" class="choices"/>
-		<span>1991</span>
-	</label>
+<section class="quiz-window">
+	<div id="quizQuestions">
+				<h2 id="Question">When was the sorority founded?</h2>
+				
+	</div> 
+	<form class="answers">
+		<label for="radio1">
+	  		<input type="radio" name="radio" id="radio1" class="choices" value="1990" checked/>
+	  		<span>1990</span>
+		</label>
 
-	<label for="radio3">
-		<input type="radio" name="radio" id="radio3" class="choices"/>
-		<span>1993</span>
-	</label>
+		<label for="radio2">
+			<input type="radio" name="radio" id="radio2" class="choices" value="1991"/>
+			<span>1991</span>
+		</label>
 
-	<label for="radio4">
-		<input type="radio" name="radio" id="radio4" class="choices"/>
-		<span>1994</span>
-	</label>
+		<label for="radio3">
+			<input type="radio" name="radio" id="radio3" class="choices" value="1993"/>
+			<span>1993</span>
+		</label>
+
+		<label for="radio4">
+			<input type="radio" name="radio" id="radio4" class="choices" value="1994"/>
+			<span>1994</span>
+		</label>
+	</form>
 	<button class="submit">Submit</button>
 	<br>
-	<progress max="100" value="20" placeholder="Progress">Progress</progress>
-</div>
+	<progress id="progress" max="100" value="20">Progress</progress>
+
+</section>
+
+<section class="results">
+	<h1>You got 4 out of 5 questions correct!</h1>
+	<button id="reset">Reset</button>
+</section>
 	<p class="credit">By <a href="http://github.com/commonstarling" target="_blank">Sheena Ramirez</a></p>
 
 	
