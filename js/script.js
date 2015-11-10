@@ -1,6 +1,7 @@
 //Global variables
 	var correctAnswers = 0;
 	var currentQuestion = 0;
+	//var userGuess = "";
 
 // Quiz Questions
 	var questionArray = [{
@@ -25,7 +26,7 @@
 				question: "Which chapter won 'Chapter of the Year' the most times between 2010 and 2013?",
 				options: ['Nu', 'Pi', 'Xi', 'Beta'],
 				questionNumber: 3,
-				answer: 1
+				answer: 2
 			},
 			{
 				question: "Which chapter is home to the first 'Keeping the Dream Alive' awardee?",
@@ -39,20 +40,25 @@ function introduction() {
 	$('.intro').show();
 	$('.quiz-window').hide();
 	$('.correct').hide();
-	$('.incorrect').hide();
+	$('.wrong').hide();
 	$('.results').hide();
 }
 
 function startGame() {
 	$('.intro').hide();
 	$('.correct').hide();
-	$('.incorrect').hide();
+	$('.wrong').hide();
 	$('.results').hide();
-	showQuestion(0);
+	showQuestion(currentQuestion);
 }
+
 
 //Show quiz questions
 function showQuestion(currentQuestion) {
+	$('.intro').hide();
+	$('.correct').hide();
+	$('.wrong').hide();
+	$('.results').hide();
 	$('.quiz-window').show();
 	$('#quizquestion').text(questionArray[currentQuestion].question);
 	//document.getElementById("quizquestion").question = questionArray[currentQuestion].question;
@@ -60,35 +66,44 @@ function showQuestion(currentQuestion) {
 	$('.answers').empty();
   		var optionsTotal = questionArray[currentQuestion].options.length;
   		for (var i = 0; i < optionsTotal; i++) {
-  			$('.answers').append('<label for="radio' + i + '" class="choices"><input type="radio" name="radio" id="radio' + i + '" class="choiceName" value="' + i + '" checked/><span>' + questionArray[currentQuestion].options[i] + '</span></label>');
+  			$('.answers').append('<label for="radio' + i + '" class="choices"><input type="radio" name="radio" id="radio' + i + '" class="choiceName" value="' + i + '"/><span>' + questionArray[currentQuestion].options[i] + '</span></label>');
  		}
 }
 
 //Tell if the answer is correct
-function rightWrong() {
-	var questionsTotal = questionArray.length;
-  		for (var i = 1; i < questionsTotal; i++) {
+function rightWrong(userGuess) {
+	//var questionsTotal = questionArray.length;
+  		//for (var i = 1; i < questionsTotal; i++) {
  			var userGuess = $('input[type="radio"]:checked').val();
-			console.log("User guess is " + userGuess);
-			console.log("Current question is " + i);
-			if (userGuess === questionArray[i].answer) {
+ 			console.log("User guess is " + userGuess);
+ 			console.log("Correct answer is " + questionArray[currentQuestion].answer);			
+			console.log("Current question is " + currentQuestion);
+			if (userGuess == questionArray[currentQuestion].answer) {
 				correctAnswers++;
-				showQuestion(i);
+				console.log("User has guessed " + correctAnswers + " answers correctly.");		
 				$('.intro').hide();
 				$('.quiz-window').hide();
-				$('.results').hide();    
+				$('.correct').show();
+				$('.wrong').hide();
+				$('.results').hide();
 			}
-			else {
-				showQuestion(i);
+			else if (userGuess !== questionArray[currentQuestion].answer) {
+				console.log("User has guessed " + correctAnswers + " answers correctly.");
+				$('.intro').hide();
+				$('.quiz-window').hide();
+				$('.correct').hide();
+				$('.wrong').show();
+				$('.results').hide();
 			}
-		}
 }
 
 //Move to next question from feedback screen
-/*function nextQuestion() {
+function nextQuestion() {
+	//var questionsTotal = questionArray.length;
+  		//for (var i = 1; i < questionsTotal; i++) {
 	currentQuestion++;
-	showQuestion();
-}*/
+	showQuestion(currentQuestion);
+}
 
 //Show user progress
 /*function userProgress(questionNumber) {
@@ -119,7 +134,7 @@ $(document).ready(function() {
 	$('#submit').on('click', rightWrong);
 
 	/*on click of the next button, move to the next question*/
-	//$('#next').on('click', nextQuestion);
+	$('#next').on('click', nextQuestion);
 
 	/*on click of the reset button, call newGame function*/
 	$('#reset').on('click', newGame);
