@@ -20,35 +20,43 @@
 </section>
 
 <section class="quiz-window">
-	<div id="quizQuestions">
-				<h2 id="Question">When was the sorority founded?</h2>
-				
-	</div> 
-	<form class="answers">
-		<label for="radio1">
-	  		<input type="radio" name="radio" id="radio1" class="choices" value="1990" checked/>
+		<h2 id="quizquestion">When was the sorority founded?</h2>
+	
+	<div class="answers">
+		<!--<label for="radio1" class="choices">
+	  		<input type="radio" name="radio" id="radio1" class="choiceName" value="1990" checked/>
 	  		<span>1990</span>
 		</label>
 
-		<label for="radio2">
-			<input type="radio" name="radio" id="radio2" class="choices" value="1991"/>
+		<label for="radio2" class="choices">
+			<input type="radio" name="radio" id="radio2" class="choiceName" value="1991"/>
 			<span>1991</span>
 		</label>
 
-		<label for="radio3">
-			<input type="radio" name="radio" id="radio3" class="choices" value="1993"/>
+		<label for="radio3" class="choices">
+			<input type="radio" name="radio" id="radio3" class="choiceName" value="1993"/>
 			<span>1993</span>
 		</label>
 
-		<label for="radio4">
-			<input type="radio" name="radio" id="radio4" class="choices" value="1994"/>
+		<label for="radio4" class="choices">
+			<input type="radio" name="radio" id="radio4" class="choiceName" value="1994"/>
 			<span>1994</span>
-		</label>
-	</form>
-	<button class="submit">Submit</button>
+		</label>-->
+	</div>
+	<button id="submit">Submit</button>
 	<br>
 	<progress id="progress" max="100" value="20">Progress</progress>
 
+</section>
+
+<section class="correct">
+	<h1>That is correct!</h1>
+	<button id="next">Next</button>
+</section>
+
+<section class="incorrect">
+	<h1>Sorry, wrong answer!</h1>
+	<button id="next">Next</button>
 </section>
 
 <section class="results">
