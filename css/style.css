@@ -8,62 +8,61 @@ body {
 	width: 20%;
 	height: auto;
 	display: block;
-	margin-top: -50px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: -50px;
+	margin: -50px auto;
 }
 
 .subhead {
 	text-align: center;
-	font-size: 2rem;
-	margin-top: -45px;	
+	font-size: 2em;
+	margin-top: -45px;
+	display: block;
+	margin: 0 auto;
 }
 
 .intro h1, .quiz-window h1, .results h1 {
 	text-align: center;
-	font-size: 2rem;
+	font-size: 2em;
 	color: white;
 	display: block;
-	margin: 8rem auto;
+	margin: 4em auto;
 }
 
 .intro h2 {
-	margin: -7rem 15rem;
+	margin: -4em 4em;
 }
 
 .intro, .quiz-window, .results h2 {
 	color: white;
 	text-align: center;
-	font-size: 1rem;
-	margin-top: 10rem;
+	font-size: 1em;
+	margin-top: 10em;
 }
 
 .intro, .quiz-window, .results {
 	background-color: black;
 	color: white;
 	border: 20px solid #ffcc99;
-	height: 25rem;
-	width: 75rem;
+	height: 25em;
+	width: 55em;
 	margin: 10px auto;
 	border-radius: 50px;
 }
 
 label {
 	color: black;
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	border: 2px solid #ffcc99;
 	text-align: center;
 	border-radius: 5px;
 	background-color: white;
-	width: 15rem;
-	height: 1.5rem;
+	width: 10em;
+	height: 1.25em;
 	margin-top: 0;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 27px;
-	padding: 5px;
 	display: block;
+	padding-top: 0.25em;
 }
 
 label:hover {
@@ -91,12 +90,12 @@ input[type="radio"]:checked + span:before {
 
 #start, #submit, #reset {
 	color: black;
-	font-size: .7rem;
+	font-size: .7em;
 	border: 2px solid #ffcc99;
 	text-align: center;
 	border-radius: 5px;
 	background-color: white;
-	height: 1.5rem;
+	height: 2em;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 10px;
@@ -105,7 +104,7 @@ input[type="radio"]:checked + span:before {
 }
 
 #start {
-	margin-top: 10rem;
+	margin-top: 10em;
 }
 
 #submit, #reset {
@@ -113,11 +112,11 @@ input[type="radio"]:checked + span:before {
 }
 
 #reset {
-	width: 5rem;
+	width: 6em;
 }
 
 #start, #submit {
-	width: 3rem;
+	width: 5em;
 }
 
 .submit:hover, #start:hover, #reset:hover {
