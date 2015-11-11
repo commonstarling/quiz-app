@@ -6,6 +6,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 	<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Z-Chi Quiz</title>
 </head>
@@ -20,30 +21,20 @@
 </section>
 
 <section class="quiz-window">
-		<h2 id="quizquestion">When was the sorority founded?</h2>
+		<h2 id="quizquestion"></h2>
 	
 	<div class="answers">
 		
 	</div>
 	<button id="submit">Submit</button>
 	<br>
-	<progress id="progress" max="100" value="20">Progress</progress>
+	<progress id="progress" max="100"></progress>
 
-</section>
-
-<section class="correct">
-	<h1>That is correct!</h1>
-	<button id="next">Next</button>
-</section>
-
-<section class="wrong">
-	<h1>Sorry, wrong answer!</h1>
-	<button id="next">Next</button>
 </section>
 
 <section class="results">
-	<h1>You got 4 out of 5 questions correct!</h1>
-	<button id="reset">Reset</button>
+	<h1 class="tally"></h1>
+	<button id="reset">Try Again</button>
 </section>
 	<p class="credit">By <a href="http://github.com/commonstarling" target="_blank">Sheena Ramirez</a></p>
 

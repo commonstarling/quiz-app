@@ -1,7 +1,7 @@
 //Global variables
 	var correctAnswers = 0;
 	var currentQuestion = 0;
-	//var userGuess = "";
+	var userGuess = "";
 
 // Quiz Questions
 	var questionArray = [{
@@ -39,29 +39,20 @@
 function introduction() {
 	$('.intro').show();
 	$('.quiz-window').hide();
-	$('.correct').hide();
-	$('.wrong').hide();
 	$('.results').hide();
 }
 
+//Start the game
 function startGame() {
 	$('.intro').hide();
-	$('.correct').hide();
-	$('.wrong').hide();
 	$('.results').hide();
 	showQuestion(currentQuestion);
 }
 
-
 //Show quiz questions
 function showQuestion(currentQuestion) {
-	$('.intro').hide();
-	$('.correct').hide();
-	$('.wrong').hide();
-	$('.results').hide();
 	$('.quiz-window').show();
 	$('#quizquestion').text(questionArray[currentQuestion].question);
-	//document.getElementById("quizquestion").question = questionArray[currentQuestion].question;
 	console.log("Current question is " + questionArray[currentQuestion].question);
 	$('.answers').empty();
   		var optionsTotal = questionArray[currentQuestion].options.length;
@@ -70,58 +61,48 @@ function showQuestion(currentQuestion) {
  		}
 }
 
-//Tell if the answer is correct
+//Check if the answer is correct
 function rightWrong(userGuess) {
-	//var questionsTotal = questionArray.length;
-  		//for (var i = 1; i < questionsTotal; i++) {
- 			var userGuess = $('input[type="radio"]:checked').val();
- 			console.log("User guess is " + userGuess);
- 			console.log("Correct answer is " + questionArray[currentQuestion].answer);			
-			console.log("Current question is " + currentQuestion);
-			if (userGuess == questionArray[currentQuestion].answer) {
-				correctAnswers++;
-				console.log("User has guessed " + correctAnswers + " answers correctly.");		
-				$('.intro').hide();
-				$('.quiz-window').hide();
-				$('.correct').show();
-				$('.wrong').hide();
-				$('.results').hide();
-			}
-			else if (userGuess !== questionArray[currentQuestion].answer) {
-				console.log("User has guessed " + correctAnswers + " answers correctly.");
-				$('.intro').hide();
-				$('.quiz-window').hide();
-				$('.correct').hide();
-				$('.wrong').show();
-				$('.results').hide();
-			}
+ 	var userGuess = $('input[type="radio"]:checked').val(); 			
+ 	console.log("Correct answer is " + questionArray[currentQuestion].answer);			
+	console.log("User guess is " + userGuess);
+	if (userGuess == questionArray[currentQuestion].answer) {
+		correctAnswers++;
+		console.log("User has guessed " + correctAnswers + " answers correctly.");		
+		nextQuestion();
+	}
+	else if (userGuess !== questionArray[currentQuestion].answer) {
+		console.log("User has guessed " + correctAnswers + " answers correctly.");
+		nextQuestion();
+	}
 }
 
-//Move to next question from feedback screen
+//Move to next question or finish the game
 function nextQuestion() {
-	//var questionsTotal = questionArray.length;
-  		//for (var i = 1; i < questionsTotal; i++) {
-	currentQuestion++;
-	showQuestion(currentQuestion);
+	var questionsTotal = (questionArray.length-1);
+  	if (currentQuestion == questionsTotal) {
+  		$('.quiz-window').hide();
+		$('.results').show();
+		$('.tally').text("You got " + correctAnswers + " out of 5 questions correct!");
+	}
+	else {
+		currentQuestion++;
+		showQuestion(currentQuestion);
+	}	
 }
 
 //Show user progress
-/*function userProgress(questionNumber) {
+function userProgress() {
 	/*update progress bar with question number * 20%*/
-	/*document.getElementById("progress").value = questionNumber * 20;
+	document.getElementById("progress").value = ((questionNumber + 1) * 20);
 }
-
-//Show user results
-function gameResults() {
-
-}*/
 
 //Start a new game
 function newGame() {
 	location.reload();
 }
 
-
+//Let the games begin!
 $(document).ready(function() {
 
 	/*start quiz with intro screen*/
@@ -138,7 +119,4 @@ $(document).ready(function() {
 
 	/*on click of the reset button, call newGame function*/
 	$('#reset').on('click', newGame);
-
 });
-
-//$(document).on('click', '#remove-button', removeItem);
