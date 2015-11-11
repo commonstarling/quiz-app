@@ -8,7 +8,7 @@ body {
 	width: 20%;
 	height: auto;
 	display: block;
-	margin-top: -75px;
+	margin-top: -50px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: -50px;
@@ -20,13 +20,19 @@ body {
 	margin-top: -45px;	
 }
 
-.intro, .quiz-window, .results > h1 {
+.intro h1, .quiz-window h1, .results h1 {
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	color: white;
+	display: block;
+	margin: 8rem auto;
 }
 
-.intro, .quiz-window, .results > h2 {
+.intro h2 {
+	margin: -7rem 15rem;
+}
+
+.intro, .quiz-window, .results h2 {
 	color: white;
 	text-align: center;
 	font-size: 1rem;
@@ -37,7 +43,7 @@ body {
 	background-color: black;
 	color: white;
 	border: 20px solid #ffcc99;
-	height: 30rem;
+	height: 25rem;
 	width: 75rem;
 	margin: 10px auto;
 	border-radius: 50px;
@@ -55,7 +61,7 @@ label {
 	margin-top: 0;
 	margin-right: auto;
 	margin-left: auto;
-	margin-bottom: 30px;
+	margin-bottom: 27px;
 	padding: 5px;
 	display: block;
 }
@@ -91,12 +97,19 @@ input[type="radio"]:checked + span:before {
 	border-radius: 5px;
 	background-color: white;
 	height: 1.5rem;
-	margin-top: 0;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 10px;
 	padding: 5px;
 	display: block;
+}
+
+#start {
+	margin-top: 10rem;
+}
+
+#submit, #reset {
+	margin-top: 0;
 }
 
 #reset {

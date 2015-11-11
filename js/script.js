@@ -52,8 +52,8 @@ function startGame() {
 //Show quiz questions
 function showQuestion(currentQuestion) {
 	$('.quiz-window').show();
+	document.getElementById("progress").value = (currentQuestion * 20);
 	$('#quizquestion').text(questionArray[currentQuestion].question);
-	console.log("Current question is " + questionArray[currentQuestion].question);
 	$('.answers').empty();
   		var optionsTotal = questionArray[currentQuestion].options.length;
   		for (var i = 0; i < optionsTotal; i++) {
@@ -64,8 +64,6 @@ function showQuestion(currentQuestion) {
 //Check if the answer is correct
 function rightWrong(userGuess) {
  	var userGuess = $('input[type="radio"]:checked').val(); 			
- 	console.log("Correct answer is " + questionArray[currentQuestion].answer);			
-	console.log("User guess is " + userGuess);
 	if (userGuess == questionArray[currentQuestion].answer) {
 		correctAnswers++;
 		console.log("User has guessed " + correctAnswers + " answers correctly.");		
@@ -92,10 +90,10 @@ function nextQuestion() {
 }
 
 //Show user progress
-function userProgress() {
+/*function userProgress() {
 	/*update progress bar with question number * 20%*/
-	document.getElementById("progress").value = ((questionNumber + 1) * 20);
-}
+	/*$( "#progress" ).progressbar( "value", (currentQuestion * 20 );
+}*/
 
 //Start a new game
 function newGame() {
