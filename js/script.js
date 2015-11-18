@@ -58,7 +58,7 @@ function startGame() {
 //Show quiz questions
 function showQuestion(currentQuestion) {
 	$('.quiz-window').show();
-	document.getElementById("progress").value = (currentQuestion * 20);
+	document.getElementById("progress").value = (currentQuestion * 17);
 	$('#quizquestion').text(questionArray[currentQuestion].question);
 	$('.answers').empty();
   		var optionsTotal = questionArray[currentQuestion].options.length;
@@ -87,7 +87,7 @@ function nextQuestion() {
   	if (currentQuestion == questionsTotal) {
   		$('.quiz-window').hide();
 		$('.results').show();
-		$('.tally').text("You got " + correctAnswers + " out of 5 questions correct!");
+		$('.tally').text("You got " + correctAnswers + " out of 6 questions correct!");
 	}
 	else {
 		currentQuestion++;
