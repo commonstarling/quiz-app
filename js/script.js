@@ -29,16 +29,16 @@
 				answer: 1
 			},
 			{
-				question: "Which city will host the 25th Anniversary Summit?",
-				options: ['Chicago', 'Los Angeles', 'Detroit', 'Las Vegas'],
-				questionNumber: 4,
-				answer: 3
-			},
-			{
 				question: "Which chapter is home to the first 'Keeping the Dream Alive' awardee?",
 				options: ['Epsilon', 'Kappa', 'Lambda', 'Iota'],
 				questionNumber: 5,
 				answer: 2
+			},
+			{
+				question: "Which city will host the 25th Anniversary Summit?",
+				options: ['Chicago', 'Los Angeles', 'Detroit', 'Las Vegas'],
+				questionNumber: 4,
+				answer: 3
 			}];
 
 //Introduction
