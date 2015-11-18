@@ -11,10 +11,10 @@
 				answer: 2
 			},
 			{
-				question: "In which state did the founders of Eta Chapter cross?",
-				options: ['Illinois', 'Wisconsin', 'Michigan', 'Maryland'],
+				question: "Which state hosted the founders of Eta Chapter when they crossed?",
+				options: ['Michigan', 'Wisconsin', 'Illinois', 'Maryland'],
 				questionNumber: 1,
-				answer: 2
+				answer: 0
 			},
 			{
 				question: "In which European country does one of the Mommy Chis live?",
@@ -24,15 +24,21 @@
 			},
 			{
 				question: "Which chapter won 'Chapter of the Year' the most times between 2010 and 2013?",
-				options: ['Nu', 'Pi', 'Xi', 'Beta'],
+				options: ['Nu', 'Xi', 'Pi', 'Beta'],
 				questionNumber: 3,
-				answer: 2
+				answer: 1
+			},
+			{
+				question: "Which city will host the 25th Anniversary Summit?",
+				options: ['Chicago', 'Los Angeles', 'Detroit', 'Las Vegas'],
+				questionNumber: 4,
+				answer: 3
 			},
 			{
 				question: "Which chapter is home to the first 'Keeping the Dream Alive' awardee?",
-				options: ['Epsilon', 'Kappa', 'Iota', 'Lambda'],
-				questionNumber: 4,
-				answer: 3
+				options: ['Epsilon', 'Kappa', 'Lambda', 'Iota'],
+				questionNumber: 5,
+				answer: 2
 			}];
 
 //Introduction
