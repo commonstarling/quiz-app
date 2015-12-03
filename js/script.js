@@ -42,21 +42,21 @@
 			}];
 
 //Introduction
-function introduction() {
+var introduction = function() {
 	$('.intro').show();
 	$('.quiz-window').hide();
 	$('.results').hide();
-}
+};
 
 //Start the game
-function startGame() {
+var startGame = function() {
 	$('.intro').hide();
 	$('.results').hide();
 	showQuestion(currentQuestion);
-}
+};
 
 //Show quiz questions
-function showQuestion(currentQuestion) {
+var showQuestion = function(currentQuestion) {
 	$('.quiz-window').show();
 	document.getElementById("progress").value = (currentQuestion * 17);
 	$('#quizquestion').text(questionArray[currentQuestion].question);
@@ -68,7 +68,7 @@ function showQuestion(currentQuestion) {
 }
 
 //Check if the answer is correct
-function rightWrong(userGuess) {
+var rightWrong = function(userGuess) {
  	var userGuess = $('input[type="radio"]:checked').val(); 			
 	if (userGuess == questionArray[currentQuestion].answer) {
 		correctAnswers++;
@@ -82,7 +82,7 @@ function rightWrong(userGuess) {
 }
 
 //Move to next question or finish the game
-function nextQuestion() {
+var nextQuestion = function() {
 	var questionsTotal = (questionArray.length-1);
   	if (currentQuestion == questionsTotal) {
   		$('.quiz-window').hide();
@@ -95,14 +95,8 @@ function nextQuestion() {
 	}	
 }
 
-//Show user progress
-/*function userProgress() {
-	/*update progress bar with question number * 20%*/
-	/*$( "#progress" ).progressbar( "value", (currentQuestion * 20 );
-}*/
-
 //Start a new game
-function newGame() {
+var newGame = function() {
 	location.reload();
 }
 
